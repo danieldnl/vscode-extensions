@@ -1,0 +1,250 @@
+{
+    /* Extending a layout */
+
+	"Extend layout": {
+		"prefix": "b:extends",
+		"body": [
+			"@extends('${1:name}')$2"
+		],
+		"description": "Blade - extends view layout"
+	},
+	"Yield content": {
+		"prefix": "b:yield",
+		"body": [
+			"@yield('${1:name}')$2"
+		],
+		"description": "Blade - yield content section"
+	},
+	"Content Section": {
+		"prefix": "b:section",
+		"body": [
+			"@section('${1:name}')",
+			"    $2",
+			"@endsection"
+		],
+		"description": "Blade - content section"
+	},
+    "Content Section Show": {
+		"prefix": "b:section-show",
+		"body": [
+			"@section('$1')",
+			"    $2",
+			"@show"
+		],
+		"description": "Blade - content section show"
+	},
+
+    /* Include sub-view */
+
+	"Include view": {
+		"prefix": "b:include",
+		"body": [
+			"@include('${1:name}')$2"
+		],
+		"description": "Blade - include view"
+	},
+
+    /* If Statements */
+
+	"If-block": {
+		"prefix": "b:if",
+		"body": [
+			"@if($1)",
+			"    $2",
+			"@endif"
+		],
+		"description": "Blade - @if block"
+	},
+	"If-else-block": {
+		"prefix": "b:if-else",
+		"body": [
+			"@if($1)",
+			"    $2",
+			"@else",
+			"    $3",
+			"@endif"
+		],
+		"description": "Blade - if-else block"
+	},
+    "Has Section": {
+		"prefix": "b:has-section",
+		"body": [
+			"@hasSection('${1:name}')",
+            "    $2",
+            "@else",
+            "    $3",
+            "@endif"
+		],
+		"description": "Blade - @hasSection condition"
+	},
+
+    /* Loops */
+
+	"For-block": {
+		"prefix": "b:for",
+		"body": [
+			"@for($i = ${1:0}; $i < ${2:\\$count}; $i++)",
+			"    $3",
+			"@endfor"
+		],
+		"description": "Blade - @for block"
+	},
+	"Foreach-block": {
+		"prefix": "b:foreach",
+		"body": [
+			"@foreach(${1:\\$collection} as ${2:\\$item})",
+			"    $3",
+			"@endforeach"
+		],
+		"description": "Blade - @foreach block"
+	},
+	"forelse-block": {
+		"prefix": "b:forelse",
+		"body": [
+			"@forelse (${1:\\$collection} as ${2:\\$item})",
+			"    $3",
+			"@empty",
+			"    $4",
+			"@endforelse"
+		],
+		"description": "Blade - @forelse block"
+	},
+	"while-block": {
+		"prefix": "b:while",
+		"body": [
+			"@while ($1)",
+			"    $2",
+			"@endwhile"
+		],
+		"description": "Blade - @while block"
+	},
+
+    /* Rendering views for collections */
+
+	"each loop": {
+		"prefix": "b:each",
+		"body": [
+            "@each('${1:view.name}', ${2:\\$collection}, '${3:variable}', '${4:view.empty}')$5"
+		],
+		"description": "Blade - @each loop"
+	},
+
+    /* Comments */
+
+	"blade comment": {
+		"prefix": "b:comment",
+		"body": [
+			"\\{\\{-- ${1:comment} --\\}\\}",
+            "$2"
+		],
+		"description": "Blade - comment block"
+	},
+
+	/* Display Data */
+
+	"blade echo-data": {
+		"prefix": "b:echo",
+		"body": [
+			"\\{\\{ ${1:\\$data} \\}\\}$2"
+		],
+		"description": "Blade - echo data"
+	},
+	"blade echo-unescaped-data": {
+		"prefix": "b:echo-html",
+		"body": [
+			"\\{!! ${1:\\$html_data} !!\\}$2"
+		],
+		"description": "Blade - echo unescaped data (allow html outputs)"
+	},
+	"blade echo-untouch": {
+		"prefix": "b:echo-raw",
+		"body": [
+			"@\\{\\{ ${1:variable} \\}\\}$2"
+		],
+		"description": "Blade - echo untouched data (allow javascript expression)"
+	},
+	"blade verbatim": {
+		"prefix": "b:verbatim",
+		"body": [
+			"@verbatim",
+			"\\{\\{ ${1:variable} \\}\\}$2",
+			"@endverbatim"
+		],
+		"description": "Blade - displaying JavaScript variables in a large portion of your template"
+	},
+
+    /* Stacks */
+    "Push stack": {
+		"prefix": "b:push",
+		"body": [
+			"@push('${1:name}')",
+            "    $2",
+            "@endpush"
+		],
+		"description": "Blade - @push stack"
+	},
+    "Stack": {
+		"prefix": "b:stack",
+		"body": [
+			"@stack('${1:name}')$2"
+		],
+		"description": "Blade - @stack"
+	},
+
+    /* Service Injection */
+
+	"inject service": {
+		"prefix": "b:inject",
+		"body": [
+			"@inject('${1:name}', '${2:class}')",
+            "$3"
+		],
+		"description": "Blade - @inject Service"
+	},
+
+	/* v5.3 - $loop variable */
+
+	"loop": {
+		"prefix": "b:loop",
+		"body": [
+			"\\$loop->${1:first}$2"
+		],
+		"description": "Blade - $loop->(index|remaining|count|first|last|depth|parent)"
+	},
+	"loop first": {
+		"prefix": "b:loop-first",
+		"body": [
+			"@if ($loop->first)",
+			"    ${1:// This is the first iteration}",
+			"@endif",
+            "$2"
+		],
+		"description": "Blade - $loop->first"
+	},
+	"loop last": {
+		"prefix": "b:loop-last",
+		"body": [
+			"@if ($loop->last)",
+			"    ${1:// This is the last iteration}",
+			"@endif",
+            "$2"
+		],
+		"description": "Blade - $loop->last"
+	},
+	"php": {
+		"prefix": "b:php",
+		"body": [
+			"@php",
+			"    $1",
+			"@endphp"
+		],
+		"description": "Blade - @php block code in view"
+	},
+	"includeIf": {
+		"prefix": "b:includeIf",
+		"body": [
+			"@includeIf('${1:view.name}'${2:, ['some' => 'data']})$3"
+		],
+		"description": "Blade -  include a view that may or may not be present, you should use the @includeIf directive"
+	}
+}

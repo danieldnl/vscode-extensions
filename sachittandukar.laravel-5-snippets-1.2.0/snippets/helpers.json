@@ -1,0 +1,26 @@
+{
+	"link_to": {
+		"prefix": "link_to",
+		"body": "\nlink_to(${1:$url}, ${2:$title = null}, ${3:$attributes = []}, ${4:$secure = null}, ${5:$escape = true})\n",
+		"description": "Generate a HTML link",
+		"scope": "source.php"
+	},
+	"link_to_asset": {
+		"prefix": "link_to_asset",
+		"body": "\nlink_to_asset(${1:$url}, ${2:$title = null}, ${3:$attributes = []}, ${4:$secure = null})\n",
+		"description": "Generate a HTML link to an asset",
+		"scope": "source.php"
+	},
+	"link_to_route": {
+		"prefix": "link_to_route",
+		"body": "\nlink_to_route(${1:$name}, ${2:$title = null}, ${3:$parameters = []}, ${4:$attributes = []})\n",
+		"description": "Generate a HTML link to a named route",
+		"scope": "source.php"
+	},
+	"link_to_action": {
+		"prefix": "link_to_action",
+		"body": "\nlink_to_action(${1:$action}, ${2:$title = null}, ${3:$parameters = []}, ${4:$attributes = []})\n",
+		"description": "Generate a HTML link to a controller action",
+		"scope": "source.php"
+	}
+}

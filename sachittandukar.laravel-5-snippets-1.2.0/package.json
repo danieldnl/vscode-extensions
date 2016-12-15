@@ -1,0 +1,35 @@
+{
+	"name": "laravel-5-snippets",
+	"displayName": "Laravel 5 Snippets",
+	"description": "Laravel 5 snippets for Visual Studio Code. Supports blade and Laravel Collective HTML.",
+	"version": "1.2.0",
+	"publisher": "sachittandukar",
+	"icon": "images/icon.png",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"galleryBanner": {
+		"color": "#ee6e73",
+		"theme": "dark"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "php",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/helpers.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "fbf507c4-5705-41ca-a4ab-abcc632ce52d",
+		"publisherId": "56408647-0e2a-4e27-a6d3-abbd0c983528",
+		"publisherDisplayName": "Sachit Tandukar"
+	}
+}

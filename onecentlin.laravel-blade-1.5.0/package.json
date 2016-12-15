@@ -1,0 +1,75 @@
+{
+	"name": "laravel-blade",
+	"displayName": "Laravel Blade Snippets",
+	"description": "Laravel blade snippets and syntax highlight support",
+	"version": "1.5.0",
+	"publisher": "onecentlin",
+	"author": {
+		"name": "Winnie Lin",
+		"email": "onecentlin@gmail.com",
+		"url": "https://devmanna.blogspot.com"
+	},
+	"homepage": "https://github.com/onecentlin/laravel-blade-snippets-vscode",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/onecentlin/laravel-blade-snippets-vscode"
+	},
+	"bugs": {
+		"url": "https://github.com/onecentlin/laravel-blade-snippets-vscode/issues"
+	},
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"keywords": [
+		"laravel",
+		"blade",
+		"template"
+	],
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#f66f62",
+		"theme": "dark"
+	},
+	"categories": [
+		"Languages",
+		"Snippets"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "blade",
+				"aliases": [
+					"Laravel Blade",
+					"Blade",
+					"blade"
+				],
+				"extensions": [
+					".blade.php"
+				],
+				"configuration": "./blade.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "blade",
+				"scopeName": "text.html.php.laravel-blade",
+				"path": "./syntaxes/blade.tmLanguage"
+			}
+		],
+		"snippets": [
+			{
+				"language": "blade",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "blade",
+				"path": "./snippets/helpers.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "3b58a227-618a-4b57-a06b-6984a2a8d1ba",
+		"publisherId": "ae5a5701-dff3-41f0-bdb1-adbf4a18997b",
+		"publisherDisplayName": "Winnie Lin"
+	}
+}

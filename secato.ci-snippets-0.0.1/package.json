@@ -1,0 +1,41 @@
+{
+	"name": "ci-snippets",
+	"displayName": "ci-snippets",
+	"description": "Snippets for CodeIgniter PHP framework",
+	"version": "0.0.1",
+	"publisher": "secato",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"license": "MIT",
+	"bugs": {
+		"email": "felipe.secato@gmail.com"
+	},
+	"keywords": [
+		"PHP",
+		"CI",
+		"CodeIgniter",
+		"Framework"
+	],
+	"categories": [
+		"Snippets"
+	],
+	"icon": "cilogo.png",
+	"galleryBanner": {
+		"color": "#dd5106",
+		"theme": "dark"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"language": "php",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "07ab51cd-4c45-446a-a06f-f955bb061565",
+		"publisherId": "a51c1e45-f23a-4106-aea2-b608e4e863d6",
+		"publisherDisplayName": "secato"
+	}
+}
